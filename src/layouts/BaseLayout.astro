@@ -1,6 +1,7 @@
 ---
 import '@styles/index.scss';
 import Appbar from '@components/Appbar.svelte';
+import Logo from '@assets/shared/desktop/logo.svg';
 
 const { title } = Astro.props;
 ---
@@ -24,7 +25,7 @@ const { title } = Astro.props;
   </head>
   <body>
     <header class='max-width'>
-      <Appbar client:load />
+      <Appbar client:load image={Logo.src} />
     </header>
     <slot />
     <footer class='max-width'>

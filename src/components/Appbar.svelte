@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
+  let { image } = $props();
 </script>
 
 <nav>
-  <p>LOGO</p>
+  <img src={image} alt="Coffeeroasters Logo" />
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/about">About us</a></li>
