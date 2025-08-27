@@ -66,10 +66,13 @@ import { Image } from 'astro:assets';
 
   .hero-paragraph {
     color: $clr-light-cream;
+    font-weight: 300;
+    line-height: 3ch;
+
     max-width: 45ch;
 
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
   }
 </style>
 
@@ -83,7 +86,7 @@ import { Image } from 'astro:assets';
         curated artisan coffees from our best roasters delivered directly to
         your door, at your schedule.
       </p>
-      <button>Create your plan</button>
+      <button class='button btn-primary'>Create your plan</button>
     </div>
   </section>
 
