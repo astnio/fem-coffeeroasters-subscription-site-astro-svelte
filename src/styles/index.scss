@@ -8,11 +8,14 @@ body {
   justify-content: center;
 
   margin: 0;
-  padding-inline: 4rem;
 
   min-height: 100dvh;
 
   font-family: 'Barlow', sans-serif;
+}
+
+.main-content {
+  padding-inline: 4rem;
 }
 
 .max-width {
@@ -21,7 +24,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  .main-content {
     padding-inline: 1rem;
   }
 }
