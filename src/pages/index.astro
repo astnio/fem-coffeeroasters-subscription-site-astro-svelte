@@ -1,8 +1,14 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import HeroImageDesktop from '@assets/home/desktop/image-hero-coffeepress.jpg';
+import HeroImageTablet from '@assets/home/tablet/image-hero-coffeepress.jpg';
+import HeroImageMobile from '@assets/home/mobile/image-hero-coffeepress.jpg';
+import { Image } from 'astro:assets';
 ---
 
 <style lang='scss'>
+  @use '@styles/variables' as *;
+
   h1,
   h2,
   h3,
@@ -11,17 +17,74 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   h6 {
     font-family: 'Fraunces', serif;
   }
+
+  section.hero {
+    display: grid;
+    grid-template-areas: 'overlap';
+    align-items: center;
+    justify-items: center;
+
+    overflow: hidden;
+  }
+
+  section.hero > .hero-content {
+    grid-area: overlap;
+    justify-self: start;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    margin-left: 9rem;
+
+    background-color: rgba($color: #ff3636, $alpha: 0.6);
+  }
+
+  section.hero > .hero-picture {
+    grid-area: overlap;
+    width: 100%;
+    height: auto;
+
+    z-index: -1;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+
+    max-width: 10ch;
+
+    margin: 0;
+
+    line-height: 1.5ch;
+  }
+
+  .hero-paragraph {
+    color: $clr-light-cream;
+    max-width: 45ch;
+
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
 </style>
 
 <BaseLayout>
-  <section class='max-width'>
-    <h1>Great coffee made simple.</h1>
-    <p>
-      Start your mornings with the world’s best coffees. Try our expertly
-      curated artisan coffees from our best roasters delivered directly to your
-      door, at your schedule.
-    </p>
-    <button>Create your plan</button>
+  <section class='max-width hero'>
+    <Image src={HeroImageDesktop} alt='' class='hero-picture' />
+    <div class='hero-content'>
+      <h1 class='hero-title'>Great coffee made simple.</h1>
+      <p class='hero-paragraph'>
+        Start your mornings with the world’s best coffees. Try our expertly
+        curated artisan coffees from our best roasters delivered directly to
+        your door, at your schedule.
+      </p>
+      <button>Create your plan</button>
+    </div>
   </section>
 
   <section class='max-width'>
