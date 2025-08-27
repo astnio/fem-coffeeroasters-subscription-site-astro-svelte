@@ -7,6 +7,8 @@
 </nav>
 
 <style lang="scss">
+  @use '/src/styles/variables' as *;
+
   nav {
     display: flex;
     align-items: center;
@@ -21,5 +23,12 @@
 
     margin: 0;
     padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $clr-grey;
   }
 </style>

@@ -7,7 +7,16 @@ import Logo from '@assets/shared/desktop/logo.svg';
 const { title } = Astro.props;
 ---
 
-<!doctype html>
+<style lang='scss'>
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+</style>
+
 <html lang='en'>
   <head lang='en'>
     <meta charset='UTF-8' />
@@ -28,7 +37,9 @@ const { title } = Astro.props;
     <header class='max-width'>
       <Appbar client:load image={Logo.src} />
     </header>
-    <slot />
+    <div class='main-content'>
+      <slot />
+    </div>
     <footer class='max-width'>
       <Navigation />
     </footer>
