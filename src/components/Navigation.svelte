@@ -17,7 +17,7 @@
 
   ol {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 
     list-style-type: none;
 
@@ -30,5 +30,6 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $clr-grey;
+    font-size: 0.9rem;
   }
 </style>

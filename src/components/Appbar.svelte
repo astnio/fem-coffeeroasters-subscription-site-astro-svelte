@@ -4,20 +4,19 @@
   let { image } = $props();
 </script>
 
-<div class="appbar">
+<header class="appbar max-width">
   <div class="appbar-content max-width">
     <img src={image} alt="Coffeeroasters Logo" />
     <Navigation></Navigation>
   </div>
-</div>
+</header>
 
 <style lang="scss">
   @use '/src/styles/variables' as *;
 
   .appbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: sticky;
+    top: 0rem;
 
     z-index: 10;
 
@@ -28,7 +27,7 @@
     width: 100%;
 
     margin-inline: auto;
-    padding-block: 1rem;
+    padding-block: 2rem;
 
     background-color: white;
   }
