@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from 'astro:transitions';
+import { slide } from 'astro:transitions';
 import '@styles/index.scss';
 import Appbar from '@components/Appbar.svelte';
 import Navigation from '@components/Navigation.svelte';
@@ -17,7 +19,7 @@ const { title } = Astro.props;
   }
 </style>
 
-<html lang='en'>
+<html lang='en' transition:name='root' transition:animate='none'>
   <head lang='en'>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -34,12 +36,14 @@ const { title } = Astro.props;
     </title>
   </head>
   <body>
-    <Appbar client:load image={Logo.src} />
-    <div class='main-content'>
+    <Appbar client:load image={Logo.src} transition:persist />
+    <main class='main-content' transition:animate={slide({ duration: '0.4s'})}>
       <slot />
-    </div>
+    </main>
     <footer class='max-width'>
       <Navigation />
     </footer>
   </body>
 </html>
+
+<ClientRouter />

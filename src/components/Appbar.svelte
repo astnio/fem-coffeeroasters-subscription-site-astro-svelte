@@ -6,7 +6,9 @@
 
 <header class="appbar">
   <div class="appbar-content max-width">
-    <img src={image} alt="Coffeeroasters Logo" />
+    <a href="/">
+      <img src={image} alt="Coffeeroasters Logo" />
+    </a>
     <Navigation></Navigation>
   </div>
 </header>
