@@ -1,5 +1,11 @@
 $clr-light-cream: hsl(43deg, 78%, 98%);
 $clr-grey: hsl(215deg, 5%, 54%);
+$clr-light-grey: hsl(25.71deg, 10.77%, 87.25%);
 $clr-dark-cyan: hsl(179deg, 81%, 29%);
+$clr-light-cyan: hsl(178.33deg, 54.55%, 61.18%);
 $clr-dark-grey-blue: hsl(215deg, 19%, 25%);
 $clr-orange: hsl(25deg, 94%, 86%);
+
+$clr-primary: $clr-dark-cyan;
+$clr-primary-active: $clr-light-cyan;
+$clr-disabled: $clr-light-grey;

@@ -4,7 +4,7 @@ import HeroImageDesktop from '@assets/home/desktop/image-hero-coffeepress.jpg';
 import HeroImageTablet from '@assets/home/tablet/image-hero-coffeepress.jpg';
 import HeroImageMobile from '@assets/home/mobile/image-hero-coffeepress.jpg';
 import { Image } from 'astro:assets';
-import Button from '@components/Button.svelte';
+import ButtonLink from '@components/ButtonLink.svelte';
 ---
 
 <style lang='scss'>
@@ -83,11 +83,11 @@ import Button from '@components/Button.svelte';
     <div class='hero-content'>
       <h1 class='hero-title'>Great coffee made simple.</h1>
       <p class='hero-paragraph'>
-        Start your mornings with the world’s best coffees. Try our expertly
-        curated artisan coffees from our best roasters delivered directly to
-        your door, at your schedule.
+        Start your mornings with the world&rsquo;s best coffees. Try our
+        expertly curated artisan coffees from our best roasters delivered
+        directly to your door, at your schedule.
       </p>
-      <Button>Create your plan</Button>
+      <ButtonLink client:load link='/plan'> Create your plan </ButtonLink>
     </div>
   </section>
 
@@ -231,3 +231,9 @@ import Button from '@components/Button.svelte';
     <button>Create your plan</button>
   </section>
 </BaseLayout>
+
+<script>
+  function myFunction() {
+    window.alert('hey lol');
+  }
+</script>
