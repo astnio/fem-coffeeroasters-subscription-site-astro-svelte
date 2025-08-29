@@ -4,7 +4,7 @@
   let { image } = $props();
 </script>
 
-<header class="appbar">
+<header class="appbar" transition:persist>
   <div class="appbar-content max-width">
     <a href="/">
       <img src={image} alt="Coffeeroasters Logo" />
@@ -34,6 +34,8 @@
     padding-block: 1rem;
 
     backdrop-filter: blur(10px);
+
+    transition: all 0.15s ease-out;
   }
 
   .appbar::after {

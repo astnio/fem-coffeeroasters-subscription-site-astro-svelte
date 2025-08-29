@@ -1,0 +1,37 @@
+<style lang='scss'>
+  @use '/src/styles/variables' as *;
+
+  .text-gradient {
+    background: -webkit-linear-gradient($clr-grey 10%, transparent 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h2.section-header {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    text-transform: lowercase;
+    font-weight: 700;
+    font-variation-settings:
+      'SOFT' 80,
+      'opsz' 14;
+
+    font-size: 4rem;
+
+    opacity: 0.8;
+  }
+
+  @media screen and (min-width: 860px) {
+    h2.section-header {
+      font-size: 6rem;
+    }
+  }
+
+  @media screen and (min-width: 1220px) {
+    h2.section-header {
+      font-size: 10rem;
+    }
+  }
+</style>
+
+<h2 class='section-header text-gradient'>Our collection</h2>
