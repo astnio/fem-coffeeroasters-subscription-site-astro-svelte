@@ -1,0 +1,102 @@
+---
+import { Picture } from 'astro:assets';
+import iconCoffeeBean from '@assets/home/desktop/icon-coffee-bean.svg';
+import iconGift from '@assets/home/desktop/icon-gift.svg';
+import iconTruck from '@assets/home/desktop/icon-truck.svg';
+---
+
+<style lang='scss'>
+  @use '/src/styles/variables' as *;
+
+  h2,
+  h3,
+  p {
+    color: $clr-light-cream;
+  }
+
+  section {
+    background-color: $clr-darker-grey-blue;
+  }
+
+  ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 8pt;
+
+    min-height: 382px;
+    max-width: 350px;
+    width: 100%;
+    background-color: $clr-dark-cyan;
+  }
+
+  li > h3 {
+    font-family: 'Fraunces';
+    font-size: 1.2rem;
+    font-weight: 900;
+
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  li > p {
+    max-width: 30ch;
+
+    line-height: 3ch;
+
+    margin: 0;
+  }
+</style>
+
+<section class='max-width'>
+  <h2>Why choose us?</h2>
+  <p>
+    A large part of our role is choosing which particular coffees will be
+    featured in our range. This means working closely with the best coffee
+    growers to give you a more impactful experience on every level.
+  </p>
+
+  <ul>
+    <li>
+      <img class='icon' />
+      <Picture src={iconCoffeeBean} alt='Coffee Bean' />
+      <h3>Best quality</h3>
+      <p>
+        Discover an endless variety of the world’s best artisan coffee from each
+        of our roasters.
+      </p>
+    </li>
+
+    <li>
+      <Picture src={iconGift} alt='Gift' />
+      <h3>Exclusive benefits</h3>
+      <p>
+        Special offers and swag when you subscribe, including 30% off your first
+        shipment.
+      </p>
+    </li>
+
+    <li>
+      <Picture src={iconTruck} alt='Truck' />
+      <h3>Free shipping</h3>
+      <p>
+        We cover the cost and coffee is delivered fast. Peak freshness:
+        guaranteed.
+      </p>
+    </li>
+  </ul>
+</section>
