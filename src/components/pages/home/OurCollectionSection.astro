@@ -1,38 +1,82 @@
 ---
 import OurCollectionHeader from './OurCollectionHeader.astro';
+import { Picture } from 'astro:assets';
+
+import itemImgDanche from '@assets/home/desktop/image-danche.png';
+import itemImgGranEspresso from '@assets/home/desktop/image-gran-espresso.png';
+import itemImgPiccollo from '@assets/home/desktop/image-piccollo.png';
+import itemImgPlantalto from '@assets/home/desktop/image-planalto.png';
+
+const collectionItems = {
+  gran_espresso: {
+    title: 'Gran Espresso',
+    image: itemImgGranEspresso,
+    description:
+      'Light and flavorful blend with cocoa and black pepper for an intense experience',
+  },
+  planalto: {
+    title: 'Planalto',
+    image: itemImgPlantalto,
+    description:
+      'Brazilian dark roast with rich and velvety body, and hints of fruits and nuts',
+  },
+  piccollo: {
+    title: 'Piccollo',
+    image: itemImgPiccollo,
+    description:
+      'Mild and smooth blend featuring notes of toasted almond and dried cherry',
+  },
+  danche: {
+    title: 'Danche',
+    image: itemImgDanche,
+    description:
+      'Ethiopian hand-harvested blend densely packed with vibrant fruit notes',
+  },
+};
 ---
 
-<section class='max-width'>
+<style>
+  section.collection-section {
+    position: relative;
+
+    margin-top: 5rem;
+  }
+
+  ol.collection-list {
+    display: flex;
+
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item-picture {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .item > p {
+    text-align: center;
+  }
+</style>
+
+<section class='max-width collection-section'>
   <OurCollectionHeader />
-  <ol>
-    <li>
-      <h3>Gran Espresso</h3>
-      <p>
-        Light and flavorful blend with cocoa and black pepper for an intense
-        experience
-      </p>
-    </li>
-
-    <li>
-      <h3>Planalto</h3>
-      <p>
-        Brazilian dark roast with rich and velvety body, and hints of fruits and
-        nuts
-      </p>
-    </li>
-
-    <li>
-      <h3>Piccollo</h3>
-      <p>
-        Mild and smooth blend featuring notes of toasted almond and dried cherry
-      </p>
-    </li>
-
-    <li>
-      <h3>Danche</h3>
-      <p>
-        Ethiopian hand-harvested blend densely packed with vibrant fruit notes
-      </p>
-    </li>
+  <ol class='collection-list'>
+    {
+      Object.values(collectionItems).map((item) => (
+        <li class='item'>
+          <Picture src={item.image} alt={item.title} class='item-picture' />
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </li>
+      ))
+    }
   </ol>
 </section>
