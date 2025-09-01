@@ -1,5 +1,5 @@
 ---
-import OurCollectionHeader from './OurCollectionHeader.astro';
+import SectionOurCollectionHeader from './SectionOurCollectionHeader.astro';
 import { Picture } from 'astro:assets';
 
 import itemImgDanche from '@assets/home/desktop/image-danche.png';
@@ -82,7 +82,7 @@ const collectionItems = {
 </style>
 
 <section class='max-width collection-section'>
-  <OurCollectionHeader />
+  <SectionOurCollectionHeader />
   <ol class='collection-list'>
     {
       Object.values(collectionItems).map((item) => (
