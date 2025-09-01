@@ -47,7 +47,7 @@
     width: 100%;
     height: 100%;
 
-    background-color: white;
+    background-color: $clr-base;
     opacity: 0.8;
 
     z-index: -1;

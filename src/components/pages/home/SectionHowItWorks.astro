@@ -1,6 +1,88 @@
 ---
-
+import ButtonLink from '@components/ButtonLink.svelte';
 ---
+
+<style lang='scss'>
+  @use '/src/styles/variables' as *;
+
+  section {
+    margin-top: 8rem;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: $clr-grey;
+
+    margin-bottom: 5rem;
+  }
+
+  ol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .row-1 {
+    position: relative;
+  }
+
+  .icon {
+    content: '';
+    height: 1.5rem;
+    width: 1.5rem;
+
+    background-color: white;
+    outline: 2px solid $clr-dark-cyan;
+
+    border-radius: 100%;
+  }
+
+  .line {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    height: 2px;
+    width: 100%;
+
+    background-color: $clr-orange;
+
+    z-index: -1;
+  }
+
+  li:last-child .line {
+    display: none;
+  }
+
+  .row-2 > p {
+    font-family: 'Fraunces', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: $clr-orange;
+
+    margin-bottom: 0;
+  }
+
+  .row-3 > h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 900;
+
+    max-width: 10ch;
+  }
+
+  .row-4 > p {
+    max-width: 32ch;
+
+    line-height: 3ch;
+  }
+</style>
 
 <section class='max-width'>
   <h2>How it works</h2>
@@ -65,5 +147,5 @@
       </div>
     </li>
   </ol>
-  <button>Create your plan</button>
+  <ButtonLink link='/plan'>Create your plan</ButtonLink>
 </section>
