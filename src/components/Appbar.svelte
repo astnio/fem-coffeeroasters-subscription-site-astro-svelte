@@ -1,14 +1,11 @@
 <script lang="ts">
   import Navigation from './Navigation.svelte';
-
-  let { image } = $props();
+  import Logo from './Logo.svelte';
 </script>
 
-<header class="appbar" transition:persist>
+<header class="appbar">
   <div class="appbar-content max-width">
-    <a href="/">
-      <img src={image} alt="Coffeeroasters Logo" />
-    </a>
+    <Logo />
     <Navigation></Navigation>
   </div>
 </header>

@@ -1,0 +1,28 @@
+---
+import Navigation from '@components/Navigation.svelte';
+---
+
+<style lang='scss'>
+  @use '/src/styles/variables' as *;
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 120px;
+
+    background-color: $clr-darker-grey-blue;
+  }
+
+  .footer-content {
+    width: 100%;
+  }
+</style>
+
+<footer class='footer-wrapper'>
+  <div class='footer-content max-width'>
+    <Navigation />
+  </div>
+</footer>
