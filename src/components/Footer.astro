@@ -1,5 +1,6 @@
 ---
 import Navigation from '@components/Navigation.svelte';
+import Logo from '@components/Logo.svelte';
 ---
 
 <style lang='scss'>
@@ -13,16 +14,22 @@ import Navigation from '@components/Navigation.svelte';
     width: 100%;
     min-height: 120px;
 
+    margin-top: 12rem;
+
     background-color: $clr-darker-grey-blue;
   }
 
   .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 2rem;
     width: 100%;
   }
 </style>
 
 <footer class='footer-wrapper'>
   <div class='footer-content max-width'>
+    <Logo darkMode={true} />
     <Navigation />
   </div>
 </footer>
