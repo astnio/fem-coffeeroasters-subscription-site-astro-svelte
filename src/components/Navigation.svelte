@@ -30,6 +30,7 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $clr-grey;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
   }
 </style>
