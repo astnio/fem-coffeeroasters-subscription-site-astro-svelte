@@ -80,6 +80,19 @@ const collectionItems = {
     line-height: 3ch;
   }
 
+  @media screen and (min-width: 375px) {
+    ol.collection-list {
+      position: relative;
+
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    p.item-paragraph {
+      max-width: 34ch;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     ol.collection-list {
       position: relative;
